@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>more_define</title>
+		<style>
+		#title {
+			font-family: "Courier New", Times, serif;
+		}
+    #whole_sentence {
+			top: 50%;
+			text-align:center;
+
+		}
+   </style>
+  </head>
+  <body>
+		<center>
+	    <p id='title'> [more_define] </p>
+	    <h3 id='whole_sentence'><span class='word'>i </span><span class='word'>love </span><span class='word'>you. </span></h3>
+		</center>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script>
+			$("#whole_sentence").on("click", "span.word", function(e){
+				clicked_word = $(this).text()
+				sentence = $('#whole_sentence').text()
+				$.ajax({
+					url: 'http://127.0.0.1:5000/define',
+					// data: {'test': $(this).text()},
+					data: {'word': clicked_word,
+								 'sentence': sentence},
+					method: 'POST',
+					success: function(data) {
+						$("#whole_sentence").html("");
+						$('#whole_sentence').html("<h3 id=\'whole_sentence\'>"+data['new_sentence']+"</h3>")
+						// $('#whole_sentence').append("<h1>"+data['success']+"</h1>")
+					}
+				})
+			});
+		</script>
+  </body>
+</html>

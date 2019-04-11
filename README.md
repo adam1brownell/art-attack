@@ -6,4 +6,4 @@ Building off the theme of "Break it down," this project allows you to click on a
 
 ![](more_define/more_define.gif)
 
-Runs JQuery + Python on local flask server, leverages nltk for nlp + beautiful soup for def lookup
+Runs JQuery + Python on local flask server, leverages nltk for nlp + beautiful soup for definition lookup

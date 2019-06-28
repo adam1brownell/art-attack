@@ -8,6 +8,8 @@ Building off the theme of "Break it down," this project allows you to click on a
 
 Runs JQuery + Python on local flask server, leverages nltk for nlp + beautiful soup for definition lookup
 
+It's also now live! https://more-define-api-heroku.herokuapp.com/
+
 ## haiku_generator (Feb 2018)
 Python NLTK generated haikus.Outputs are always absurd, often nonsense, and mostly entertaining
 
